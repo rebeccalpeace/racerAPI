@@ -7,10 +7,21 @@
         event.preventDefault();
         try {
         let inputSeason = event.target.season.value   // 1950-2022
+        
         let inputRound = event.target.round.value    
+        if (!inputSeason && inputRound){
+            let display = document.getElementById('standingTable');
+            display.innerHTML = '';
+
+            let error = document.createElement('h3');
+            error.className = 'text-center'
+            error.innerHTML = "Invalid -- Please choose year between 1950 and 2022 or a different Round"
+            let errorDiv = document.getElementById('standingTable')
+            errorDiv.append(error)
+        } else {
         console.log(inputRound)
         let standing = await getStandingsInfo(inputSeason, inputRound);
-        buildTable(standing)} catch(err) {
+        buildTable(standing)}} catch(err) {
             let display = document.getElementById('standingTable');
             display.innerHTML = '';
 
@@ -20,8 +31,9 @@
             let errorDiv = document.getElementById('standingTable')
             errorDiv.append(error)
         }
-        // season.value = '';
-        // round.value = '';
+        event.target.season.value = '';
+        event.target.round.value = '';
+    
     }
 
     // function to grab data from the racer API
