@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="Description" content="Enter your description here"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+        <title>RacerAPI</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+                <span class="navbar-brand mb-0 h1">F1 Racer Standings</span>
+            </div>
+        </nav>
+        <div class="container">
+            <h1 class="text-center" id="top-header">F1 Standings</h1>
+            <form action="" id="standingsForm">
+                <div class="row">
+                    <div class="col-5">
+                        <input type="text" class="form-control" name="season" placeholder="Season  e.g. 1980">
+                    </div>
+                    <div class="col-5">
+                        <input type="text" class="form-control" name="round" placeholder="Round  e.g. 10">
+                    </div>
+                    <div class="col-2">
+                        <input type="submit" value="submit" class="btn btn-success d-block w-100">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="row m-5" id="standingTable">
+
+        </div>
+
+        <script src="js/main.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    </body>
+</html>
